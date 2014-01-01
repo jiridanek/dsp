@@ -1,0 +1,10 @@
+name: dsp
+version: 0.1.0-git
+description: >
+  DSP is a library containing basic Digital Signal Processing
+  functions like convolution.
+author: Jiří Daněk <dnk@mail.muni.cz>
+homepage: http://github.com/jirkadanek/dsp
+documentation: http://jirkadanek.github.com/dsp/***FIXME:***
+dev_dependencies:
+  unittest: any
