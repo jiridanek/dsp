@@ -11,6 +11,14 @@ class Shape {
 }
 
 /**
+ * Returns a correlation of [a] and [b]. Shape [s] is either Shape.FULL or Shape.SAME.
+ * The default shape is Shape.SAME. If a and b is the same array, the result is a crosscorrelation.
+ */
+List<num> corr(List<num> a, List<num> b,  [ String s = Shape.SAME ] ){
+  return _concorr(a, b, s, false); // do not flip b
+}
+
+/**
  * Returns a convolution of [a] and [b]. Shape [s] is either Shape.FULL or Shape.SAME.
  * The default shape is Shape.FULL.
  */

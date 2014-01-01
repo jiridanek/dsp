@@ -26,4 +26,16 @@ main() {
       expect(conv(primes,last, Shape.FULL), equals(conv(last,primes, Shape.FULL)));
     });
   });
+
+  group('corr', () {
+    test('should work with Shape.FULL', () {
+      expect(corr([1, 2, 3], [0, 1, 0.5], Shape.FULL), equals([0.5, 2, 3.5, 3, 0]));
+    });
+    test('should work with Shape.SAME', () {
+      expect(corr([1, 2, 3], [0, 1, 0.5], Shape.SAME), equals([2, 3.5, 3]));
+    });
+    //test('should work with Shape.VALID', () {
+    //  expect(corr([1, 2, 3], [0, 1, 0.5], Shape.VALID), equals([3.5]));
+    //});
+  });
 }
